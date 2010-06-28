@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LibrarySystemDBModelStoreContainer" CdmEntityContainer="LibrarySystemDBEntities">
+    <EntitySetMapping Name="AccessInfoes">
+      <EntityTypeMapping TypeName="LibrarySystemDBModel.AccessInfo">
+        <MappingFragment StoreEntitySet="AccessInfo">
+          <ScalarProperty Name="NRIC" ColumnName="NRIC" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="AccessRole" ColumnName="AccessRole" />
+          <ScalarProperty Name="SecurityQuestion" ColumnName="SecurityQuestion" />
+          <ScalarProperty Name="SecurityAnswer" ColumnName="SecurityAnswer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Addresses">
+      <EntityTypeMapping TypeName="LibrarySystemDBModel.Address">
+        <MappingFragment StoreEntitySet="Address">
+          <ScalarProperty Name="BlockNo" ColumnName="BlockNo" />
+          <ScalarProperty Name="UnitNo" ColumnName="UnitNo" />
+          <ScalarProperty Name="FloorNo" ColumnName="FloorNo" />
+          <ScalarProperty Name="NRIC" ColumnName="NRIC" />
+          <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+          <ScalarProperty Name="TownShip" ColumnName="TownShip" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="TelNo" ColumnName="TelNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AnnouncementMSGs">
+      <EntityTypeMapping TypeName="LibrarySystemDBModel.AnnouncementMSG">
+        <MappingFragment StoreEntitySet="AnnouncementMSG">
+          <ScalarProperty Name="MSGID" ColumnName="MSGID" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="PortalContentID" ColumnName="PortalContentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Books">
+      <EntityTypeMapping TypeName="LibrarySystemDBModel.Book">
+        <MappingFragment StoreEntitySet="Book">
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="AuthorName" ColumnName="AuthorName" />
+          <ScalarProperty Name="PublisherID" ColumnName="PublisherID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="DateOfPublication" ColumnName="DateOfPublication" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="IsReserved" ColumnName="IsReserved" />
+          <ScalarProperty Name="Rating" ColumnName="Rating" />
+          <ScalarProperty Name="NumOfRatingPeople" ColumnName="NumOfRatingPeople" />
+          <ScalarProperty Name="CatelogID" ColumnName="CatelogID" />
+          <ScalarProperty Name="Synopsis" ColumnName="Synopsis" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookCategories">
+      <EntityTypeMapping TypeName="LibrarySystemDBModel.BookCategory">
+        <MappingFragment StoreEntitySet="BookCategory">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="CatergoyTitle" ColumnName="CatergoyTitle" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookCatelogs">
+      <EntityTypeMapping TypeName="LibrarySystemDBModel.BookCatelog">
+        <MappingFragment StoreEntitySet="BookCatelog">
+          <ScalarProperty Name="CatelogID" ColumnName="CatelogID" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookOrders">
+      <EntityTypeMapping TypeName="LibrarySystemDBModel.BookOrder">
+        <MappingFragment StoreEntitySet="BookOrder">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+          <ScalarProperty Name="OrderBy" ColumnName="OrderBy" />
+          <ScalarProperty Name="ApprovedDate" ColumnName="ApprovedDate" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookOrderDetails">
+      <EntityTypeMapping TypeName="LibrarySystemDBModel.BookOrderDetail">
+        <MappingFragment StoreEntitySet="BookOrderDetail">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="OrderDetailID" ColumnName="OrderDetailID" />
+          <ScalarProperty Name="BookCategory" ColumnName="BookCategory" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="AuthorName" ColumnName="AuthorName" />
+          <ScalarProperty Name="PublisherID" ColumnName="PublisherID" />
+          <ScalarProperty Name="UnitCost" ColumnName="UnitCost" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BusinessRules">
+      <EntityTypeMapping TypeName="LibrarySystemDBModel.BusinessRule">
+        <MappingFragment StoreEntitySet="BusinessRule">
+          <ScalarProperty Name="RuleID" ColumnName="RuleID" />
+          <ScalarProperty Name="RuleStartDate" ColumnName="RuleStartDate" />
+          <ScalarProperty Name="FineRatePerDay" ColumnName="FineRatePerDay" />
+          <ScalarProperty Name="LoanPeriod" ColumnName="LoanPeriod" />
+          <ScalarProperty Name="NumOfBookPerLoan" ColumnName="NumOfBookPerLoan" />
+          <ScalarProperty Name="NumOfBookReservationPerPerson" ColumnName="NumOfBookReservationPerPerson" />
+          <ScalarProperty Name="NumOfExtendableItem" ColumnName="NumOfExtendableItem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Feedbacks">
+      <EntityTypeMapping TypeName="LibrarySystemDBModel.Feedback">
+        <MappingFragment StoreEntitySet="Feedback">
+          <ScalarProperty Name="TicketNo" ColumnName="TicketNo" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="NRIC" ColumnName="NRIC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LibrarianAccessInfoes">
+      <EntityTypeMapping TypeName="LibrarySystemDBModel.LibrarianAccessInfo">
+        <MappingFragment StoreEntitySet="LibrarianAccessInfo">
+          <ScalarProperty Name="NRIC" ColumnName="NRIC" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="AccessRole" ColumnName="AccessRole" />
+          <ScalarProperty Name="SecurityQuestion" ColumnName="SecurityQuestion" />
+          <ScalarProperty Name="SecurityAnswer" ColumnName="SecurityAnswer" />
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LibraryEvents">
+      <EntityTypeMapping TypeName="LibrarySystemDBModel.LibraryEvent">
+        <MappingFragment StoreEntitySet="LibraryEvent">
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+          <ScalarProperty Name="EventTime" ColumnName="EventTime" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Venue" ColumnName="Venue" />
+          <ScalarProperty Name="EventDetail" ColumnName="EventDetail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoanRecords">
+      <EntityTypeMapping TypeName="LibrarySystemDBModel.LoanRecord">
+        <MappingFragment StoreEntitySet="LoanRecord">
+          <ScalarProperty Name="NRIC" ColumnName="NRIC" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="ReturnedDate" ColumnName="ReturnedDate" />
+          <ScalarProperty Name="isLoanRenewable" ColumnName="isLoanRenewable" />
+          <ScalarProperty Name="LoanRecordID" ColumnName="LoanRecordID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LostDamageBooks">
+      <EntityTypeMapping TypeName="LibrarySystemDBModel.LostDamageBook">
+        <MappingFragment StoreEntitySet="LostDamageBook">
+          <ScalarProperty Name="LostDamageID" ColumnName="LostDamageID" />
+          <ScalarProperty Name="LostDamageDate" ColumnName="LostDamageDate" />
+          <ScalarProperty Name="LostDamageBy" ColumnName="LostDamageBy" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="AuthorName" ColumnName="AuthorName" />
+          <ScalarProperty Name="PublisherID" ColumnName="PublisherID" />
+          <ScalarProperty Name="YearOfPublication" ColumnName="YearOfPublication" />
+          <ScalarProperty Name="Rating" ColumnName="Rating" />
+          <ScalarProperty Name="NumOfRatingPeople" ColumnName="NumOfRatingPeople" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LostDamageHistories">
+      <EntityTypeMapping TypeName="LibrarySystemDBModel.LostDamageHistory">
+        <MappingFragment StoreEntitySet="LostDamageHistory">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="QuantityOfBooks" ColumnName="QuantityOfBooks" />
+          <ScalarProperty Name="LostDamageID" ColumnName="LostDamageID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MembershipHistories">
+      <EntityTypeMapping TypeName="LibrarySystemDBModel.MembershipHistory">
+        <MappingFragment StoreEntitySet="MembershipHistory">
+          <ScalarProperty Name="NRIC" ColumnName="NRIC" />
+          <ScalarProperty Name="MemberStatusChangeDate" ColumnName="MemberStatusChangeDate" />
+          <ScalarProperty Name="NumOfYearOfMemberShip" ColumnName="NumOfYearOfMemberShip" />
+          <ScalarProperty Name="MemberShipLevel" ColumnName="MemberShipLevel" />
+          <ScalarProperty Name="MembershipHistoryID" ColumnName="MembershipHistoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PortalContents">
+      <EntityTypeMapping TypeName="LibrarySystemDBModel.PortalContent">
+        <MappingFragment StoreEntitySet="PortalContent">
+          <ScalarProperty Name="PortalContentID" ColumnName="PortalContentID" />
+          <ScalarProperty Name="LastModifiedDate" ColumnName="LastModifiedDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PreferenceID" ColumnName="PreferenceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PortalPreferences">
+      <EntityTypeMapping TypeName="LibrarySystemDBModel.PortalPreference">
+        <MappingFragment StoreEntitySet="PortalPreference">
+          <ScalarProperty Name="PreferenceID" ColumnName="PreferenceID" />
+          <ScalarProperty Name="CssFilePath" ColumnName="CssFilePath" />
+          <ScalarProperty Name="LastModifiedDate" ColumnName="LastModifiedDate" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PreviewPages">
+      <EntityTypeMapping TypeName="LibrarySystemDBModel.PreviewPage">
+        <MappingFragment StoreEntitySet="PreviewPage">
+          <ScalarProperty Name="PageNo" ColumnName="PageNo" />
+          <ScalarProperty Name="TextLine" ColumnName="TextLine" />
+          <ScalarProperty Name="PreviewPageID" ColumnName="PreviewPageID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Publishers">
+      <EntityTypeMapping TypeName="LibrarySystemDBModel.Publisher">
+        <MappingFragment StoreEntitySet="Publisher">
+          <ScalarProperty Name="PublisherID" ColumnName="PublisherID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="TeLNO" ColumnName="TeLNO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registrations">
+      <EntityTypeMapping TypeName="LibrarySystemDBModel.Registration">
+        <MappingFragment StoreEntitySet="Registration">
+          <ScalarProperty Name="RegistrationID" ColumnName="RegistrationID" />
+          <ScalarProperty Name="NRIC" ColumnName="NRIC" />
+          <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReservedBooks">
+      <EntityTypeMapping TypeName="LibrarySystemDBModel.ReservedBook">
+        <MappingFragment StoreEntitySet="ReservedBook">
+          <ScalarProperty Name="ReservedID" ColumnName="ReservedID" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="ReservedDateTime" ColumnName="ReservedDateTime" />
+          <ScalarProperty Name="ReserveStatus" ColumnName="ReserveStatus" />
+          <ScalarProperty Name="CatelogID" ColumnName="CatelogID" />
+          <ScalarProperty Name="NRIC" ColumnName="NRIC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReviewBooks">
+      <EntityTypeMapping TypeName="LibrarySystemDBModel.ReviewBook">
+        <MappingFragment StoreEntitySet="ReviewBook">
+          <ScalarProperty Name="ReviewCommentID" ColumnName="ReviewCommentID" />
+          <ScalarProperty Name="DateOfReview" ColumnName="DateOfReview" />
+          <ScalarProperty Name="NRIC" ColumnName="NRIC" />
+          <ScalarProperty Name="RatingByReview" ColumnName="RatingByReview" />
+          <ScalarProperty Name="ReviewDetail" ColumnName="ReviewDetail" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="LibrarySystemDBModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="LibrarySystemDBModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="NRIC" ColumnName="NRIC" />
+          <ScalarProperty Name="EducationLevel" ColumnName="EducationLevel" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="InterestedCategory" ColumnName="InterestedCategory" />
+          <ScalarProperty Name="AccountStatus" ColumnName="AccountStatus" />
+          <ScalarProperty Name="Citizenship" ColumnName="Citizenship" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserInvoices">
+      <EntityTypeMapping TypeName="LibrarySystemDBModel.UserInvoice">
+        <MappingFragment StoreEntitySet="UserInvoice">
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="NRIC" ColumnName="NRIC" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="BookPageDetail" TypeName="LibrarySystemDBModel.BookPageDetail" StoreEntitySet="BookPageDetail">
+      <EndProperty Name="Book">
+        <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+        <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+      </EndProperty>
+      <EndProperty Name="PreviewPage">
+        <ScalarProperty Name="PreviewPageID" ColumnName="PreviewPageID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

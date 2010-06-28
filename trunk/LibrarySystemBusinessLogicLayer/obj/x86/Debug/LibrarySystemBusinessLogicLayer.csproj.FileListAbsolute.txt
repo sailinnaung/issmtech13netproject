@@ -1,0 +1,53 @@
+D:\Projects\LastestISS\trunk\LibrarySystemBusinessLogicLayer\bin\Debug\LibrarySystemBusinessLogicLayer.dll.config
+D:\Projects\LastestISS\trunk\LibrarySystemBusinessLogicLayer\bin\Debug\LibrarySystemBusinessLogicLayer.dll
+D:\Projects\LastestISS\trunk\LibrarySystemBusinessLogicLayer\bin\Debug\LibrarySystemBusinessLogicLayer.pdb
+D:\Projects\LastestISS\trunk\LibrarySystemBusinessLogicLayer\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Projects\LastestISS\trunk\LibrarySystemBusinessLogicLayer\obj\x86\Debug\LibrarySystemBusinessLogicLayer.dll
+D:\Projects\LastestISS\trunk\LibrarySystemBusinessLogicLayer\obj\x86\Debug\LibrarySystemBusinessLogicLayer.pdb
+D:\Projects\LastestISS\trunk\LibrarySystemBusinessLogicLayer\bin\Debug\LibrarySystemDB.mdf
+D:\Projects\LastestISS\trunk\LibrarySystemBusinessLogicLayer\bin\Debug\LibrarySystemDB_log.ldf
+C:\Documents and Settings\chingmei\Desktop\LastestISS\trunk\LibrarySystemBusinessLogicLayer\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\chingmei\Desktop\LastestISS\trunk\LibrarySystemBusinessLogicLayer\obj\x86\Debug\LibrarySystemBusinessLogicLayer.pdb
+C:\Documents and Settings\chingmei\Desktop\LastestISS\trunk\LibrarySystemBusinessLogicLayer\bin\Debug\LibrarySystemDB.mdf
+C:\Documents and Settings\chingmei\Desktop\LastestISS\trunk\LibrarySystemBusinessLogicLayer\bin\Debug\LibrarySystemDB_log.ldf
+C:\Documents and Settings\chingmei\Desktop\LastestISS\trunk\LibrarySystemBusinessLogicLayer\bin\Debug\LibrarySystemBusinessLogicLayer.dll.config
+C:\Documents and Settings\chingmei\Desktop\LastestISS\trunk\LibrarySystemBusinessLogicLayer\bin\Debug\LibrarySystemBusinessLogicLayer.dll
+C:\Documents and Settings\chingmei\Desktop\LastestISS\trunk\LibrarySystemBusinessLogicLayer\bin\Debug\LibrarySystemBusinessLogicLayer.pdb
+C:\Documents and Settings\chingmei\Desktop\LastestISS\trunk\LibrarySystemBusinessLogicLayer\obj\x86\Debug\LibrarySystemBusinessLogicLayer.dll
+D:\MTech\Assignments\.NET 1\issnetproject\LibrarySystemBusinessLogicLayer\bin\Debug\LibrarySystemDB.mdf
+D:\MTech\Assignments\.NET 1\issnetproject\LibrarySystemBusinessLogicLayer\bin\Debug\LibrarySystemDB_log.ldf
+D:\MTech\Assignments\.NET 1\issnetproject\LibrarySystemBusinessLogicLayer\bin\Debug\LibrarySystemBusinessLogicLayer.dll.config
+D:\MTech\Assignments\.NET 1\issnetproject\LibrarySystemBusinessLogicLayer\bin\Debug\LibrarySystemBusinessLogicLayer.dll
+D:\MTech\Assignments\.NET 1\issnetproject\LibrarySystemBusinessLogicLayer\bin\Debug\LibrarySystemBusinessLogicLayer.pdb
+D:\MTech\Assignments\.NET 1\issnetproject\LibrarySystemBusinessLogicLayer\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\MTech\Assignments\.NET 1\issnetproject\LibrarySystemBusinessLogicLayer\obj\x86\Debug\LibrarySystemBusinessLogicLayer.dll
+D:\MTech\Assignments\.NET 1\issnetproject\LibrarySystemBusinessLogicLayer\obj\x86\Debug\LibrarySystemBusinessLogicLayer.pdb
+D:\Projects\issnetproject\LibrarySystemBusinessLogicLayer\bin\Debug\LibrarySystemDB.mdf
+D:\Projects\issnetproject\LibrarySystemBusinessLogicLayer\bin\Debug\LibrarySystemDB_log.ldf
+D:\Projects\issnetproject\LibrarySystemBusinessLogicLayer\bin\Debug\LibrarySystemBusinessLogicLayer.dll.config
+D:\Projects\issnetproject\LibrarySystemBusinessLogicLayer\bin\Debug\LibrarySystemBusinessLogicLayer.dll
+D:\Projects\issnetproject\LibrarySystemBusinessLogicLayer\bin\Debug\LibrarySystemBusinessLogicLayer.pdb
+D:\Projects\issnetproject\LibrarySystemBusinessLogicLayer\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Projects\issnetproject\LibrarySystemBusinessLogicLayer\obj\x86\Debug\LibrarySystemBusinessLogicLayer.dll
+D:\Projects\issnetproject\LibrarySystemBusinessLogicLayer\obj\x86\Debug\LibrarySystemBusinessLogicLayer.pdb
+D:\Projects\issnetproject\bin\LibrarySystemDB.mdf
+D:\Projects\issnetproject\bin\LibrarySystemDB_log.ldf
+D:\Projects\issnetproject\bin\LibrarySystemBusinessLogicLayer.dll.config
+D:\Projects\issnetproject\bin\LibrarySystemBusinessLogicLayer.dll
+D:\Projects\issnetproject\bin\LibrarySystemBusinessLogicLayer.pdb
+D:\MTech\Assignments\IntegratedISSProect\IntegratedISSProect\IntegratedISSProject\bin\LibrarySystemDB.mdf
+D:\MTech\Assignments\IntegratedISSProect\IntegratedISSProect\IntegratedISSProject\bin\LibrarySystemDB_log.ldf
+D:\MTech\Assignments\IntegratedISSProect\IntegratedISSProect\IntegratedISSProject\bin\LibrarySystemBusinessLogicLayer.dll.config
+D:\MTech\Assignments\IntegratedISSProect\IntegratedISSProect\IntegratedISSProject\bin\LibrarySystemBusinessLogicLayer.dll
+D:\MTech\Assignments\IntegratedISSProect\IntegratedISSProect\IntegratedISSProject\bin\LibrarySystemBusinessLogicLayer.pdb
+D:\MTech\Assignments\IntegratedISSProect\IntegratedISSProect\IntegratedISSProject\LibrarySystemBusinessLogicLayer\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\MTech\Assignments\IntegratedISSProect\IntegratedISSProect\IntegratedISSProject\LibrarySystemBusinessLogicLayer\obj\x86\Debug\LibrarySystemBusinessLogicLayer.dll
+D:\MTech\Assignments\IntegratedISSProect\IntegratedISSProect\IntegratedISSProject\LibrarySystemBusinessLogicLayer\obj\x86\Debug\LibrarySystemBusinessLogicLayer.pdb
+D:\MTech\Assignments\.NET 1\integratedissproject\bin\LibrarySystemDB.mdf
+D:\MTech\Assignments\.NET 1\integratedissproject\bin\LibrarySystemDB_log.ldf
+D:\MTech\Assignments\.NET 1\integratedissproject\bin\LibrarySystemBusinessLogicLayer.dll.config
+D:\MTech\Assignments\.NET 1\integratedissproject\bin\LibrarySystemBusinessLogicLayer.dll
+D:\MTech\Assignments\.NET 1\integratedissproject\bin\LibrarySystemBusinessLogicLayer.pdb
+D:\MTech\Assignments\.NET 1\integratedissproject\LibrarySystemBusinessLogicLayer\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\MTech\Assignments\.NET 1\integratedissproject\LibrarySystemBusinessLogicLayer\obj\x86\Debug\LibrarySystemBusinessLogicLayer.dll
+D:\MTech\Assignments\.NET 1\integratedissproject\LibrarySystemBusinessLogicLayer\obj\x86\Debug\LibrarySystemBusinessLogicLayer.pdb
