@@ -1,0 +1,770 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LibrarySystemDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="LibrarySystemDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AccessInfoes" EntityType="LibrarySystemDBModel.AccessInfo" />
+    <EntitySet Name="Addresses" EntityType="LibrarySystemDBModel.Address" />
+    <EntitySet Name="AnnouncementMSGs" EntityType="LibrarySystemDBModel.AnnouncementMSG" />
+    <EntitySet Name="Books" EntityType="LibrarySystemDBModel.Book" />
+    <EntitySet Name="BookCategories" EntityType="LibrarySystemDBModel.BookCategory" />
+    <EntitySet Name="BookCatelogs" EntityType="LibrarySystemDBModel.BookCatelog" />
+    <EntitySet Name="BookOrders" EntityType="LibrarySystemDBModel.BookOrder" />
+    <EntitySet Name="BookOrderDetails" EntityType="LibrarySystemDBModel.BookOrderDetail" />
+    <EntitySet Name="BusinessRules" EntityType="LibrarySystemDBModel.BusinessRule" />
+    <EntitySet Name="Feedbacks" EntityType="LibrarySystemDBModel.Feedback" />
+    <EntitySet Name="LibrarianAccessInfoes" EntityType="LibrarySystemDBModel.LibrarianAccessInfo" />
+    <EntitySet Name="LibraryEvents" EntityType="LibrarySystemDBModel.LibraryEvent" />
+    <EntitySet Name="LoanRecords" EntityType="LibrarySystemDBModel.LoanRecord" />
+    <EntitySet Name="LostDamageBooks" EntityType="LibrarySystemDBModel.LostDamageBook" />
+    <EntitySet Name="LostDamageHistories" EntityType="LibrarySystemDBModel.LostDamageHistory" />
+    <EntitySet Name="MembershipHistories" EntityType="LibrarySystemDBModel.MembershipHistory" />
+    <EntitySet Name="PortalContents" EntityType="LibrarySystemDBModel.PortalContent" />
+    <EntitySet Name="PortalPreferences" EntityType="LibrarySystemDBModel.PortalPreference" />
+    <EntitySet Name="PreviewPages" EntityType="LibrarySystemDBModel.PreviewPage" />
+    <EntitySet Name="Publishers" EntityType="LibrarySystemDBModel.Publisher" />
+    <EntitySet Name="Registrations" EntityType="LibrarySystemDBModel.Registration" />
+    <EntitySet Name="ReservedBooks" EntityType="LibrarySystemDBModel.ReservedBook" />
+    <EntitySet Name="ReviewBooks" EntityType="LibrarySystemDBModel.ReviewBook" />
+    <EntitySet Name="sysdiagrams" EntityType="LibrarySystemDBModel.sysdiagram" />
+    <EntitySet Name="Users" EntityType="LibrarySystemDBModel.User" />
+    <EntitySet Name="UserInvoices" EntityType="LibrarySystemDBModel.UserInvoice" />
+    <AssociationSet Name="FK_AccessInfo_User" Association="LibrarySystemDBModel.FK_AccessInfo_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="AccessInfo" EntitySet="AccessInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Address_User" Association="LibrarySystemDBModel.FK_Address_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Address" EntitySet="Addresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnnouncementMSG_PortalContent" Association="LibrarySystemDBModel.FK_AnnouncementMSG_PortalContent">
+      <End Role="PortalContent" EntitySet="PortalContents" />
+      <End Role="AnnouncementMSG" EntitySet="AnnouncementMSGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Book_BookCatelog" Association="LibrarySystemDBModel.FK_Book_BookCatelog">
+      <End Role="BookCatelog" EntitySet="BookCatelogs" />
+      <End Role="Book" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Book_Publisher" Association="LibrarySystemDBModel.FK_Book_Publisher">
+      <End Role="Publisher" EntitySet="Publishers" />
+      <End Role="Book" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LoanRecord_Book" Association="LibrarySystemDBModel.FK_LoanRecord_Book">
+      <End Role="Book" EntitySet="Books" />
+      <End Role="LoanRecord" EntitySet="LoanRecords" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReservedBook_Book" Association="LibrarySystemDBModel.FK_ReservedBook_Book">
+      <End Role="Book" EntitySet="Books" />
+      <End Role="ReservedBook" EntitySet="ReservedBooks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReviewBook_Book" Association="LibrarySystemDBModel.FK_ReviewBook_Book">
+      <End Role="Book" EntitySet="Books" />
+      <End Role="ReviewBook" EntitySet="ReviewBooks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BookCatelog_BookCategory" Association="LibrarySystemDBModel.FK_BookCatelog_BookCategory">
+      <End Role="BookCategory" EntitySet="BookCategories" />
+      <End Role="BookCatelog" EntitySet="BookCatelogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LostDamageHistory_BookCategory" Association="LibrarySystemDBModel.FK_LostDamageHistory_BookCategory">
+      <End Role="BookCategory" EntitySet="BookCategories" />
+      <End Role="LostDamageHistory" EntitySet="LostDamageHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReservedBook_BookCatelog" Association="LibrarySystemDBModel.FK_ReservedBook_BookCatelog">
+      <End Role="BookCatelog" EntitySet="BookCatelogs" />
+      <End Role="ReservedBook" EntitySet="ReservedBooks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BookOrderDetail_BookOrder" Association="LibrarySystemDBModel.FK_BookOrderDetail_BookOrder">
+      <End Role="BookOrder" EntitySet="BookOrders" />
+      <End Role="BookOrderDetail" EntitySet="BookOrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BookOrderDetail_Publisher" Association="LibrarySystemDBModel.FK_BookOrderDetail_Publisher">
+      <End Role="Publisher" EntitySet="Publishers" />
+      <End Role="BookOrderDetail" EntitySet="BookOrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Feedback_User" Association="LibrarySystemDBModel.FK_Feedback_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Feedback" EntitySet="Feedbacks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LoanRecord_User" Association="LibrarySystemDBModel.FK_LoanRecord_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="LoanRecord" EntitySet="LoanRecords" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LostDamageBook_LostDamageHistory" Association="LibrarySystemDBModel.FK_LostDamageBook_LostDamageHistory">
+      <End Role="LostDamageHistory" EntitySet="LostDamageHistories" />
+      <End Role="LostDamageBook" EntitySet="LostDamageBooks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LostDamageBook_Publisher" Association="LibrarySystemDBModel.FK_LostDamageBook_Publisher">
+      <End Role="Publisher" EntitySet="Publishers" />
+      <End Role="LostDamageBook" EntitySet="LostDamageBooks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MembershipHistory_User" Association="LibrarySystemDBModel.FK_MembershipHistory_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="MembershipHistory" EntitySet="MembershipHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PortalContent_PortalPreference" Association="LibrarySystemDBModel.FK_PortalContent_PortalPreference">
+      <End Role="PortalPreference" EntitySet="PortalPreferences" />
+      <End Role="PortalContent" EntitySet="PortalContents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Registration_User" Association="LibrarySystemDBModel.FK_Registration_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Registration" EntitySet="Registrations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Registration_UserInvoice" Association="LibrarySystemDBModel.FK_Registration_UserInvoice">
+      <End Role="UserInvoice" EntitySet="UserInvoices" />
+      <End Role="Registration" EntitySet="Registrations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReservedBook_User" Association="LibrarySystemDBModel.FK_ReservedBook_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="ReservedBook" EntitySet="ReservedBooks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReviewBook_User" Association="LibrarySystemDBModel.FK_ReviewBook_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="ReviewBook" EntitySet="ReviewBooks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserInvoice_User" Association="LibrarySystemDBModel.FK_UserInvoice_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserInvoice" EntitySet="UserInvoices" />
+    </AssociationSet>
+    <AssociationSet Name="BookPageDetail" Association="LibrarySystemDBModel.BookPageDetail">
+      <End Role="Book" EntitySet="Books" />
+      <End Role="PreviewPage" EntitySet="PreviewPages" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AccessInfo">
+    <Key>
+      <PropertyRef Name="NRIC" />
+    </Key>
+    <Property Name="NRIC" Type="String" Nullable="false" MaxLength="9" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AccessRole" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="SecurityQuestion" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SecurityAnswer" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="User" Relationship="LibrarySystemDBModel.FK_AccessInfo_User" FromRole="AccessInfo" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="NRIC" />
+    </Key>
+    <Property Name="BlockNo" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="UnitNo" Type="Int32" />
+    <Property Name="FloorNo" Type="Int32" />
+    <Property Name="NRIC" Type="String" Nullable="false" MaxLength="9" Unicode="true" FixedLength="false" />
+    <Property Name="StreetName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TownShip" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PostalCode" Type="Int32" Nullable="false" />
+    <Property Name="TelNo" Type="Int32" />
+    <NavigationProperty Name="User" Relationship="LibrarySystemDBModel.FK_Address_User" FromRole="Address" ToRole="User" />
+  </EntityType>
+  <EntityType Name="AnnouncementMSG">
+    <Key>
+      <PropertyRef Name="MSGID" />
+      <PropertyRef Name="StartDate" />
+    </Key>
+    <Property Name="MSGID" Type="Int32" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" />
+    <Property Name="Message" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PortalContentID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="PortalContent" Relationship="LibrarySystemDBModel.FK_AnnouncementMSG_PortalContent" FromRole="AnnouncementMSG" ToRole="PortalContent" />
+  </EntityType>
+  <EntityType Name="Book">
+    <Key>
+      <PropertyRef Name="ISBN" />
+      <PropertyRef Name="SerialNo" />
+    </Key>
+    <Property Name="ISBN" Type="String" Nullable="false" MaxLength="13" Unicode="true" FixedLength="false" />
+    <Property Name="SerialNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AuthorName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PublisherID" Type="Int32" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="DateOfPublication" Type="DateTime" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="IsReserved" Type="Boolean" Nullable="false" />
+    <Property Name="Rating" Type="Double" Nullable="false" />
+    <Property Name="NumOfRatingPeople" Type="Int32" Nullable="false" />
+    <Property Name="CatelogID" Type="Int32" Nullable="false" />
+    <Property Name="Synopsis" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="BookCatelog" Relationship="LibrarySystemDBModel.FK_Book_BookCatelog" FromRole="Book" ToRole="BookCatelog" />
+    <NavigationProperty Name="Publisher" Relationship="LibrarySystemDBModel.FK_Book_Publisher" FromRole="Book" ToRole="Publisher" />
+    <NavigationProperty Name="LoanRecords" Relationship="LibrarySystemDBModel.FK_LoanRecord_Book" FromRole="Book" ToRole="LoanRecord" />
+    <NavigationProperty Name="ReservedBooks" Relationship="LibrarySystemDBModel.FK_ReservedBook_Book" FromRole="Book" ToRole="ReservedBook" />
+    <NavigationProperty Name="ReviewBooks" Relationship="LibrarySystemDBModel.FK_ReviewBook_Book" FromRole="Book" ToRole="ReviewBook" />
+    <NavigationProperty Name="PreviewPages" Relationship="LibrarySystemDBModel.BookPageDetail" FromRole="Book" ToRole="PreviewPage" />
+  </EntityType>
+  <EntityType Name="BookCategory">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CatergoyTitle" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="BookCatelogs" Relationship="LibrarySystemDBModel.FK_BookCatelog_BookCategory" FromRole="BookCategory" ToRole="BookCatelog" />
+    <NavigationProperty Name="LostDamageHistories" Relationship="LibrarySystemDBModel.FK_LostDamageHistory_BookCategory" FromRole="BookCategory" ToRole="LostDamageHistory" />
+  </EntityType>
+  <EntityType Name="BookCatelog">
+    <Key>
+      <PropertyRef Name="CatelogID" />
+    </Key>
+    <Property Name="CatelogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Books" Relationship="LibrarySystemDBModel.FK_Book_BookCatelog" FromRole="BookCatelog" ToRole="Book" />
+    <NavigationProperty Name="BookCategory" Relationship="LibrarySystemDBModel.FK_BookCatelog_BookCategory" FromRole="BookCatelog" ToRole="BookCategory" />
+    <NavigationProperty Name="ReservedBooks" Relationship="LibrarySystemDBModel.FK_ReservedBook_BookCatelog" FromRole="BookCatelog" ToRole="ReservedBook" />
+  </EntityType>
+  <EntityType Name="BookOrder">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderDate" Type="DateTime" Nullable="false" />
+    <Property Name="OrderStatus" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="OrderBy" Type="String" Nullable="false" MaxLength="9" Unicode="true" FixedLength="false" />
+    <Property Name="ApprovedDate" Type="DateTime" />
+    <Property Name="ApprovedBy" Type="String" MaxLength="9" Unicode="true" FixedLength="false" />
+    <Property Name="TotalCost" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <NavigationProperty Name="BookOrderDetails" Relationship="LibrarySystemDBModel.FK_BookOrderDetail_BookOrder" FromRole="BookOrder" ToRole="BookOrderDetail" />
+  </EntityType>
+  <EntityType Name="BookOrderDetail">
+    <Key>
+      <PropertyRef Name="OrderDetailID" />
+    </Key>
+    <Property Name="OrderID" Type="Int32" Nullable="false" />
+    <Property Name="OrderDetailID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BookCategory" Type="Int32" Nullable="false" />
+    <Property Name="ISBN" Type="String" Nullable="false" MaxLength="13" Unicode="true" FixedLength="false" />
+    <Property Name="AuthorName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PublisherID" Type="Int32" Nullable="false" />
+    <Property Name="UnitCost" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="Remark" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="BookOrder" Relationship="LibrarySystemDBModel.FK_BookOrderDetail_BookOrder" FromRole="BookOrderDetail" ToRole="BookOrder" />
+    <NavigationProperty Name="Publisher" Relationship="LibrarySystemDBModel.FK_BookOrderDetail_Publisher" FromRole="BookOrderDetail" ToRole="Publisher" />
+  </EntityType>
+  <EntityType Name="BusinessRule">
+    <Key>
+      <PropertyRef Name="RuleID" />
+    </Key>
+    <Property Name="RuleID" Type="Int32" Nullable="false" />
+    <Property Name="RuleStartDate" Type="DateTime" Nullable="false" />
+    <Property Name="FineRatePerDay" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="LoanPeriod" Type="Int32" Nullable="false" />
+    <Property Name="NumOfBookPerLoan" Type="Int32" Nullable="false" />
+    <Property Name="NumOfBookReservationPerPerson" Type="Int32" Nullable="false" />
+    <Property Name="NumOfExtendableItem" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Feedback">
+    <Key>
+      <PropertyRef Name="TicketNo" />
+    </Key>
+    <Property Name="TicketNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Status" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="NRIC" Type="String" Nullable="false" MaxLength="9" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="User" Relationship="LibrarySystemDBModel.FK_Feedback_User" FromRole="Feedback" ToRole="User" />
+  </EntityType>
+  <EntityType Name="LibrarianAccessInfo">
+    <Key>
+      <PropertyRef Name="NRIC" />
+    </Key>
+    <Property Name="NRIC" Type="String" Nullable="false" MaxLength="9" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AccessRole" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="SecurityQuestion" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SecurityAnswer" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="StaffID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="LibraryEvent">
+    <Key>
+      <PropertyRef Name="EventID" />
+    </Key>
+    <Property Name="EventID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EventDate" Type="DateTime" Nullable="false" />
+    <Property Name="EventTime" Type="Time" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Venue" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="EventDetail" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="LoanRecord">
+    <Key>
+      <PropertyRef Name="LoanRecordID" />
+    </Key>
+    <Property Name="NRIC" Type="String" Nullable="false" MaxLength="9" Unicode="true" FixedLength="false" />
+    <Property Name="ISBN" Type="String" Nullable="false" MaxLength="13" Unicode="true" FixedLength="false" />
+    <Property Name="SerialNo" Type="Int32" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" />
+    <Property Name="Duration" Type="Int32" Nullable="false" />
+    <Property Name="ReturnedDate" Type="DateTime" />
+    <Property Name="isLoanRenewable" Type="Boolean" Nullable="false" />
+    <Property Name="LoanRecordID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Book" Relationship="LibrarySystemDBModel.FK_LoanRecord_Book" FromRole="LoanRecord" ToRole="Book" />
+    <NavigationProperty Name="User" Relationship="LibrarySystemDBModel.FK_LoanRecord_User" FromRole="LoanRecord" ToRole="User" />
+  </EntityType>
+  <EntityType Name="LostDamageBook">
+    <Key>
+      <PropertyRef Name="LostDamageID" />
+    </Key>
+    <Property Name="LostDamageID" Type="Int32" Nullable="false" />
+    <Property Name="LostDamageDate" Type="DateTime" Nullable="false" />
+    <Property Name="LostDamageBy" Type="String" Nullable="false" MaxLength="9" Unicode="true" FixedLength="false" />
+    <Property Name="ISBN" Type="String" Nullable="false" MaxLength="13" Unicode="true" FixedLength="false" />
+    <Property Name="SerialNo" Type="Int32" Nullable="false" />
+    <Property Name="AuthorName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PublisherID" Type="Int32" Nullable="false" />
+    <Property Name="YearOfPublication" Type="Int32" Nullable="false" />
+    <Property Name="Rating" Type="Int32" />
+    <Property Name="NumOfRatingPeople" Type="Int32" />
+    <NavigationProperty Name="LostDamageHistory" Relationship="LibrarySystemDBModel.FK_LostDamageBook_LostDamageHistory" FromRole="LostDamageBook" ToRole="LostDamageHistory" />
+    <NavigationProperty Name="Publisher" Relationship="LibrarySystemDBModel.FK_LostDamageBook_Publisher" FromRole="LostDamageBook" ToRole="Publisher" />
+  </EntityType>
+  <EntityType Name="LostDamageHistory">
+    <Key>
+      <PropertyRef Name="LostDamageID" />
+    </Key>
+    <Property Name="CategoryID" Type="Int32" Nullable="false" />
+    <Property Name="QuantityOfBooks" Type="Int32" Nullable="false" />
+    <Property Name="LostDamageID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="BookCategory" Relationship="LibrarySystemDBModel.FK_LostDamageHistory_BookCategory" FromRole="LostDamageHistory" ToRole="BookCategory" />
+    <NavigationProperty Name="LostDamageBook" Relationship="LibrarySystemDBModel.FK_LostDamageBook_LostDamageHistory" FromRole="LostDamageHistory" ToRole="LostDamageBook" />
+  </EntityType>
+  <EntityType Name="MembershipHistory">
+    <Key>
+      <PropertyRef Name="MembershipHistoryID" />
+    </Key>
+    <Property Name="NRIC" Type="String" Nullable="false" MaxLength="9" Unicode="true" FixedLength="false" />
+    <Property Name="MemberStatusChangeDate" Type="DateTime" Nullable="false" />
+    <Property Name="NumOfYearOfMemberShip" Type="Int32" Nullable="false" />
+    <Property Name="MemberShipLevel" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="MembershipHistoryID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="LibrarySystemDBModel.FK_MembershipHistory_User" FromRole="MembershipHistory" ToRole="User" />
+  </EntityType>
+  <EntityType Name="PortalContent">
+    <Key>
+      <PropertyRef Name="PortalContentID" />
+    </Key>
+    <Property Name="PortalContentID" Type="Int32" Nullable="false" />
+    <Property Name="LastModifiedDate" Type="DateTime" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="PreferenceID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="AnnouncementMSGs" Relationship="LibrarySystemDBModel.FK_AnnouncementMSG_PortalContent" FromRole="PortalContent" ToRole="AnnouncementMSG" />
+    <NavigationProperty Name="PortalPreference" Relationship="LibrarySystemDBModel.FK_PortalContent_PortalPreference" FromRole="PortalContent" ToRole="PortalPreference" />
+  </EntityType>
+  <EntityType Name="PortalPreference">
+    <Key>
+      <PropertyRef Name="PreferenceID" />
+    </Key>
+    <Property Name="PreferenceID" Type="Int32" Nullable="false" />
+    <Property Name="CssFilePath" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="LastModifiedDate" Type="DateTime" Nullable="false" />
+    <Property Name="CreationDate" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="PortalContents" Relationship="LibrarySystemDBModel.FK_PortalContent_PortalPreference" FromRole="PortalPreference" ToRole="PortalContent" />
+  </EntityType>
+  <EntityType Name="PreviewPage">
+    <Key>
+      <PropertyRef Name="PreviewPageID" />
+    </Key>
+    <Property Name="PageNo" Type="Int32" Nullable="false" />
+    <Property Name="TextLine" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PreviewPageID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Books" Relationship="LibrarySystemDBModel.BookPageDetail" FromRole="PreviewPage" ToRole="Book" />
+  </EntityType>
+  <EntityType Name="Publisher">
+    <Key>
+      <PropertyRef Name="PublisherID" />
+    </Key>
+    <Property Name="PublisherID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TeLNO" Type="Int32" />
+    <NavigationProperty Name="Books" Relationship="LibrarySystemDBModel.FK_Book_Publisher" FromRole="Publisher" ToRole="Book" />
+    <NavigationProperty Name="BookOrderDetails" Relationship="LibrarySystemDBModel.FK_BookOrderDetail_Publisher" FromRole="Publisher" ToRole="BookOrderDetail" />
+    <NavigationProperty Name="LostDamageBooks" Relationship="LibrarySystemDBModel.FK_LostDamageBook_Publisher" FromRole="Publisher" ToRole="LostDamageBook" />
+  </EntityType>
+  <EntityType Name="Registration">
+    <Key>
+      <PropertyRef Name="RegistrationID" />
+    </Key>
+    <Property Name="RegistrationID" Type="Int32" Nullable="false" />
+    <Property Name="NRIC" Type="String" Nullable="false" MaxLength="9" Unicode="true" FixedLength="false" />
+    <Property Name="RegistrationDate" Type="DateTime" Nullable="false" />
+    <Property Name="InvoiceID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="LibrarySystemDBModel.FK_Registration_User" FromRole="Registration" ToRole="User" />
+    <NavigationProperty Name="UserInvoice" Relationship="LibrarySystemDBModel.FK_Registration_UserInvoice" FromRole="Registration" ToRole="UserInvoice" />
+  </EntityType>
+  <EntityType Name="ReservedBook">
+    <Key>
+      <PropertyRef Name="ReservedID" />
+    </Key>
+    <Property Name="ReservedID" Type="Int32" Nullable="false" />
+    <Property Name="ISBN" Type="String" Nullable="false" MaxLength="13" Unicode="true" FixedLength="false" />
+    <Property Name="SerialNo" Type="Int32" Nullable="false" />
+    <Property Name="ReservedDateTime" Type="DateTime" Nullable="false" />
+    <Property Name="ReserveStatus" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="CatelogID" Type="Int32" Nullable="false" />
+    <Property Name="NRIC" Type="String" Nullable="false" MaxLength="9" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Book" Relationship="LibrarySystemDBModel.FK_ReservedBook_Book" FromRole="ReservedBook" ToRole="Book" />
+    <NavigationProperty Name="BookCatelog" Relationship="LibrarySystemDBModel.FK_ReservedBook_BookCatelog" FromRole="ReservedBook" ToRole="BookCatelog" />
+    <NavigationProperty Name="User" Relationship="LibrarySystemDBModel.FK_ReservedBook_User" FromRole="ReservedBook" ToRole="User" />
+  </EntityType>
+  <EntityType Name="ReviewBook">
+    <Key>
+      <PropertyRef Name="ReviewCommentID" />
+    </Key>
+    <Property Name="ReviewCommentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DateOfReview" Type="DateTime" Nullable="false" />
+    <Property Name="NRIC" Type="String" Nullable="false" MaxLength="9" Unicode="true" FixedLength="false" />
+    <Property Name="RatingByReview" Type="Double" />
+    <Property Name="ReviewDetail" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ISBN" Type="String" Nullable="false" MaxLength="13" Unicode="true" FixedLength="false" />
+    <Property Name="SerialNo" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Book" Relationship="LibrarySystemDBModel.FK_ReviewBook_Book" FromRole="ReviewBook" ToRole="Book" />
+    <NavigationProperty Name="User" Relationship="LibrarySystemDBModel.FK_ReviewBook_User" FromRole="ReviewBook" ToRole="User" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="NRIC" />
+    </Key>
+    <Property Name="Title" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="NRIC" Type="String" Nullable="false" MaxLength="9" Unicode="true" FixedLength="false" />
+    <Property Name="EducationLevel" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ContactNo" Type="Int32" />
+    <Property Name="DOB" Type="DateTime" Nullable="false" />
+    <Property Name="InterestedCategory" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AccountStatus" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="Citizenship" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Gender" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="AccessInfo" Relationship="LibrarySystemDBModel.FK_AccessInfo_User" FromRole="User" ToRole="AccessInfo" />
+    <NavigationProperty Name="Address" Relationship="LibrarySystemDBModel.FK_Address_User" FromRole="User" ToRole="Address" />
+    <NavigationProperty Name="Feedbacks" Relationship="LibrarySystemDBModel.FK_Feedback_User" FromRole="User" ToRole="Feedback" />
+    <NavigationProperty Name="LoanRecords" Relationship="LibrarySystemDBModel.FK_LoanRecord_User" FromRole="User" ToRole="LoanRecord" />
+    <NavigationProperty Name="MembershipHistories" Relationship="LibrarySystemDBModel.FK_MembershipHistory_User" FromRole="User" ToRole="MembershipHistory" />
+    <NavigationProperty Name="Registrations" Relationship="LibrarySystemDBModel.FK_Registration_User" FromRole="User" ToRole="Registration" />
+    <NavigationProperty Name="ReservedBooks" Relationship="LibrarySystemDBModel.FK_ReservedBook_User" FromRole="User" ToRole="ReservedBook" />
+    <NavigationProperty Name="ReviewBooks" Relationship="LibrarySystemDBModel.FK_ReviewBook_User" FromRole="User" ToRole="ReviewBook" />
+    <NavigationProperty Name="UserInvoices" Relationship="LibrarySystemDBModel.FK_UserInvoice_User" FromRole="User" ToRole="UserInvoice" />
+  </EntityType>
+  <EntityType Name="UserInvoice">
+    <Key>
+      <PropertyRef Name="InvoiceID" />
+    </Key>
+    <Property Name="InvoiceID" Type="Int32" Nullable="false" />
+    <Property Name="NRIC" Type="String" Nullable="false" MaxLength="9" Unicode="true" FixedLength="false" />
+    <Property Name="Amount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="Reason" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="InvoiceDate" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="Registrations" Relationship="LibrarySystemDBModel.FK_Registration_UserInvoice" FromRole="UserInvoice" ToRole="Registration" />
+    <NavigationProperty Name="User" Relationship="LibrarySystemDBModel.FK_UserInvoice_User" FromRole="UserInvoice" ToRole="User" />
+  </EntityType>
+  <Association Name="FK_AccessInfo_User">
+    <End Role="User" Type="LibrarySystemDBModel.User" Multiplicity="1" />
+    <End Role="AccessInfo" Type="LibrarySystemDBModel.AccessInfo" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="NRIC" />
+      </Principal>
+      <Dependent Role="AccessInfo">
+        <PropertyRef Name="NRIC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Address_User">
+    <End Role="User" Type="LibrarySystemDBModel.User" Multiplicity="1" />
+    <End Role="Address" Type="LibrarySystemDBModel.Address" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="NRIC" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="NRIC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnnouncementMSG_PortalContent">
+    <End Role="PortalContent" Type="LibrarySystemDBModel.PortalContent" Multiplicity="1" />
+    <End Role="AnnouncementMSG" Type="LibrarySystemDBModel.AnnouncementMSG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PortalContent">
+        <PropertyRef Name="PortalContentID" />
+      </Principal>
+      <Dependent Role="AnnouncementMSG">
+        <PropertyRef Name="PortalContentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Book_BookCatelog">
+    <End Role="BookCatelog" Type="LibrarySystemDBModel.BookCatelog" Multiplicity="1" />
+    <End Role="Book" Type="LibrarySystemDBModel.Book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BookCatelog">
+        <PropertyRef Name="CatelogID" />
+      </Principal>
+      <Dependent Role="Book">
+        <PropertyRef Name="CatelogID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Book_Publisher">
+    <End Role="Publisher" Type="LibrarySystemDBModel.Publisher" Multiplicity="0..1" />
+    <End Role="Book" Type="LibrarySystemDBModel.Book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Publisher">
+        <PropertyRef Name="PublisherID" />
+      </Principal>
+      <Dependent Role="Book">
+        <PropertyRef Name="PublisherID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LoanRecord_Book">
+    <End Role="Book" Type="LibrarySystemDBModel.Book" Multiplicity="1" />
+    <End Role="LoanRecord" Type="LibrarySystemDBModel.LoanRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Book">
+        <PropertyRef Name="ISBN" />
+        <PropertyRef Name="SerialNo" />
+      </Principal>
+      <Dependent Role="LoanRecord">
+        <PropertyRef Name="ISBN" />
+        <PropertyRef Name="SerialNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReservedBook_Book">
+    <End Role="Book" Type="LibrarySystemDBModel.Book" Multiplicity="1" />
+    <End Role="ReservedBook" Type="LibrarySystemDBModel.ReservedBook" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Book">
+        <PropertyRef Name="ISBN" />
+        <PropertyRef Name="SerialNo" />
+      </Principal>
+      <Dependent Role="ReservedBook">
+        <PropertyRef Name="ISBN" />
+        <PropertyRef Name="SerialNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReviewBook_Book">
+    <End Role="Book" Type="LibrarySystemDBModel.Book" Multiplicity="1" />
+    <End Role="ReviewBook" Type="LibrarySystemDBModel.ReviewBook" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Book">
+        <PropertyRef Name="ISBN" />
+        <PropertyRef Name="SerialNo" />
+      </Principal>
+      <Dependent Role="ReviewBook">
+        <PropertyRef Name="ISBN" />
+        <PropertyRef Name="SerialNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BookCatelog_BookCategory">
+    <End Role="BookCategory" Type="LibrarySystemDBModel.BookCategory" Multiplicity="1" />
+    <End Role="BookCatelog" Type="LibrarySystemDBModel.BookCatelog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BookCategory">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="BookCatelog">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LostDamageHistory_BookCategory">
+    <End Role="BookCategory" Type="LibrarySystemDBModel.BookCategory" Multiplicity="1" />
+    <End Role="LostDamageHistory" Type="LibrarySystemDBModel.LostDamageHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BookCategory">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="LostDamageHistory">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReservedBook_BookCatelog">
+    <End Role="BookCatelog" Type="LibrarySystemDBModel.BookCatelog" Multiplicity="1" />
+    <End Role="ReservedBook" Type="LibrarySystemDBModel.ReservedBook" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BookCatelog">
+        <PropertyRef Name="CatelogID" />
+      </Principal>
+      <Dependent Role="ReservedBook">
+        <PropertyRef Name="CatelogID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BookOrderDetail_BookOrder">
+    <End Role="BookOrder" Type="LibrarySystemDBModel.BookOrder" Multiplicity="1" />
+    <End Role="BookOrderDetail" Type="LibrarySystemDBModel.BookOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BookOrder">
+        <PropertyRef Name="OrderID" />
+      </Principal>
+      <Dependent Role="BookOrderDetail">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BookOrderDetail_Publisher">
+    <End Role="Publisher" Type="LibrarySystemDBModel.Publisher" Multiplicity="1" />
+    <End Role="BookOrderDetail" Type="LibrarySystemDBModel.BookOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Publisher">
+        <PropertyRef Name="PublisherID" />
+      </Principal>
+      <Dependent Role="BookOrderDetail">
+        <PropertyRef Name="PublisherID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Feedback_User">
+    <End Role="User" Type="LibrarySystemDBModel.User" Multiplicity="1" />
+    <End Role="Feedback" Type="LibrarySystemDBModel.Feedback" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="NRIC" />
+      </Principal>
+      <Dependent Role="Feedback">
+        <PropertyRef Name="NRIC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LoanRecord_User">
+    <End Role="User" Type="LibrarySystemDBModel.User" Multiplicity="1" />
+    <End Role="LoanRecord" Type="LibrarySystemDBModel.LoanRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="NRIC" />
+      </Principal>
+      <Dependent Role="LoanRecord">
+        <PropertyRef Name="NRIC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LostDamageBook_LostDamageHistory">
+    <End Role="LostDamageHistory" Type="LibrarySystemDBModel.LostDamageHistory" Multiplicity="1" />
+    <End Role="LostDamageBook" Type="LibrarySystemDBModel.LostDamageBook" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="LostDamageHistory">
+        <PropertyRef Name="LostDamageID" />
+      </Principal>
+      <Dependent Role="LostDamageBook">
+        <PropertyRef Name="LostDamageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LostDamageBook_Publisher">
+    <End Role="Publisher" Type="LibrarySystemDBModel.Publisher" Multiplicity="1" />
+    <End Role="LostDamageBook" Type="LibrarySystemDBModel.LostDamageBook" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Publisher">
+        <PropertyRef Name="PublisherID" />
+      </Principal>
+      <Dependent Role="LostDamageBook">
+        <PropertyRef Name="PublisherID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MembershipHistory_User">
+    <End Role="User" Type="LibrarySystemDBModel.User" Multiplicity="1" />
+    <End Role="MembershipHistory" Type="LibrarySystemDBModel.MembershipHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="NRIC" />
+      </Principal>
+      <Dependent Role="MembershipHistory">
+        <PropertyRef Name="NRIC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PortalContent_PortalPreference">
+    <End Role="PortalPreference" Type="LibrarySystemDBModel.PortalPreference" Multiplicity="1" />
+    <End Role="PortalContent" Type="LibrarySystemDBModel.PortalContent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PortalPreference">
+        <PropertyRef Name="PreferenceID" />
+      </Principal>
+      <Dependent Role="PortalContent">
+        <PropertyRef Name="PreferenceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Registration_User">
+    <End Role="User" Type="LibrarySystemDBModel.User" Multiplicity="1" />
+    <End Role="Registration" Type="LibrarySystemDBModel.Registration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="NRIC" />
+      </Principal>
+      <Dependent Role="Registration">
+        <PropertyRef Name="NRIC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Registration_UserInvoice">
+    <End Role="UserInvoice" Type="LibrarySystemDBModel.UserInvoice" Multiplicity="1" />
+    <End Role="Registration" Type="LibrarySystemDBModel.Registration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInvoice">
+        <PropertyRef Name="InvoiceID" />
+      </Principal>
+      <Dependent Role="Registration">
+        <PropertyRef Name="InvoiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReservedBook_User">
+    <End Role="User" Type="LibrarySystemDBModel.User" Multiplicity="1" />
+    <End Role="ReservedBook" Type="LibrarySystemDBModel.ReservedBook" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="NRIC" />
+      </Principal>
+      <Dependent Role="ReservedBook">
+        <PropertyRef Name="NRIC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReviewBook_User">
+    <End Role="User" Type="LibrarySystemDBModel.User" Multiplicity="1" />
+    <End Role="ReviewBook" Type="LibrarySystemDBModel.ReviewBook" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="NRIC" />
+      </Principal>
+      <Dependent Role="ReviewBook">
+        <PropertyRef Name="NRIC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserInvoice_User">
+    <End Role="User" Type="LibrarySystemDBModel.User" Multiplicity="1" />
+    <End Role="UserInvoice" Type="LibrarySystemDBModel.UserInvoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="NRIC" />
+      </Principal>
+      <Dependent Role="UserInvoice">
+        <PropertyRef Name="NRIC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BookPageDetail">
+    <End Role="Book" Type="LibrarySystemDBModel.Book" Multiplicity="*" />
+    <End Role="PreviewPage" Type="LibrarySystemDBModel.PreviewPage" Multiplicity="*" />
+  </Association>
+</Schema>
